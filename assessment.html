@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Assessment | Skill Innovator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7faff;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .topic-card {
+      background: white;
+      border: 2px solid #3498db;
+      color: #34495e;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .topic-card:hover {
+      background: #ecf6ff;
+      transform: scale(1.03);
+      border-color: #2980b9;
+    }
+
+    @media (max-width: 600px) {
+      .topic-card {
+        font-size: 1rem;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏆 Skill Assessment - Choose a Topic</h1>
+
+  <div class="topics">
+    <div class="topic-card" onclick="startQuiz('html')">HTML</div>
+    <div class="topic-card" onclick="startQuiz('css')">CSS</div>
+    <div class="topic-card" onclick="startQuiz('javascript')">JavaScript</div>
+    <div class="topic-card" onclick="startQuiz('react')">React.js</div>
+    <div class="topic-card" onclick="startQuiz('node')">Node.js</div>
+    <div class="topic-card" onclick="startQuiz('python')">Python</div>
+    <div class="topic-card" onclick="startQuiz('java')">Java</div>
+    <div class="topic-card" onclick="startQuiz('cpp')">C++</div>
+    <div class="topic-card" onclick="startQuiz('ds')">Data Structures & Algorithms</div>
+    <div class="topic-card" onclick="startQuiz('sql')">SQL</div>
+    <div class="topic-card" onclick="startQuiz('mongodb')">MongoDB</div>
+    <div class="topic-card" onclick="startQuiz('git')">Git & GitHub</div>
+    <div class="topic-card" onclick="startQuiz('os')">Operating Systems Basics</div>
+    <div class="topic-card" onclick="startQuiz('ux')">Web Design & UX</div>
+    <div class="topic-card" onclick="startQuiz('softskills')">Communication & Soft Skills</div>
+  </div>
+  
+  /*<script>
+    function startQuiz(topic) {
+      // Redirect to the quiz page with the topic as a query parameter
+      window.location.href = `quiz.html?topic=${topic}`;
+    }
+    fetch('questions.json')
+  .then(response => response.json())
+  .then(data => {
+    // Use data.html, data.css, etc.
+    console.log(data);
+  })
+  .catch(error => console.error('Error loading questions:', error));
+  
+
+  </script>//
+  <script src="js/assessment.js"></script>
+
+
+</body>
+</html>
